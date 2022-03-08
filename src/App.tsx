@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Components/Header';
-
+import Content from './Components/Content';
+import Total from './Components/Total';
 const App = () => {
   const courseName = "Half Stack application development";
   const courseParts = [
@@ -21,19 +22,8 @@ const App = () => {
   return (
     <div>
       <Header name={courseName} />
-      <p>
-        {courseParts[0].name} {courseParts[0].exerciseCount}
-      </p>
-      <p>
-        {courseParts[1].name} {courseParts[1].exerciseCount}
-      </p>
-      <p>
-        {courseParts[2].name} {courseParts[2].exerciseCount}
-      </p>
-      <p>
-        Number of exercises{" "}
-        {courseParts.reduce((carry, part) => carry + part.exerciseCount, 0)}
-      </p>
+      <Content courses={courseParts} />
+      <Total courses={courseParts} />
     </div>
   );
 };
