@@ -1,7 +1,7 @@
 import React from "react";
-import { Course } from "../types";
+import { CoursePart } from "../types";
 
-const Content = ({ courses }: { courses: Course[] }) => {
+const Content = ({ courses }: { courses: CoursePart[] }) => {
     console.log('courses', courses);
 
   return(
